@@ -1,7 +1,7 @@
 <div class="wrap t201plugin">
 	<h2>
 		Generate Shortcodes
-		<a href="<?php print admin_url('admin.php?page=ct-all-clients'); ?>" class="add-new-h2">All Clients</a>&nbsp;&nbsp;
+		<a href="<?php print admin_url('admin.php?page=ct-all-clients');?>" class="add-new-h2">All Clients</a>&nbsp;&nbsp;
 	</h2>
 
 	<div id="message" class="updated below-h2 ct-msg ct_success_msg">
@@ -10,14 +10,14 @@
 	<div id="message" class="error below-h2 ct-msg ct_error_msg">
 		<p>Issues generating shortcode.</p>
 	</div>
-	
+
 	<div class="tbox">
 		<div class="tbox-heading">
 			<h3>Configure and Generate ShortCode</h3>
-			<a href="http://labs.think201.com/plugin/clients" target="_blank" class="pull-right">Need help?</a>
+			<a href="https://github.com/Think201/wordpress-plugin-clients" target="_blank" class="pull-right">Need help?</a>
 		</div>
 		<div class="tbox-body">
-			<form name="ct-create-shortcode" id="ct-create-shortcode" action="#" method="post">		        
+			<form name="ct-create-shortcode" id="ct-create-shortcode" action="#" method="post">
 				<input type="hidden" name="action" value="ct_create_shortcode">
 				<table class="form-table">
 
@@ -39,9 +39,9 @@
 							<label for="category">Client's Category:</label>
 						</td>
 						<td>
-							<?php ct\getClientCatList(); ?>
+							<?php ct\getClientCatList();?>
 						</td>
-					</tr>					
+					</tr>
 
 					<tr valign="top">
 						<th scope="row">
@@ -64,7 +64,7 @@
 							<input type="text" id="numclients" name="numclients" class="small-text" value="-1">
 							<p>Leave default value -1 to show all</p>
 						</td>
-					</tr>										
+					</tr>
 
 					<tr valign="top">
 						<th scope="row">
@@ -110,7 +110,7 @@
 					</tr>
 				</table>
 				<div id="shortcode-holder"></div>
-				<p class="submit">	    
+				<p class="submit">
 					<button onClick="CTCreateShortCode.post('#ct-create-shortcode')" class="button button-primary" type="button">Generate Shortcode</button>
 				</p>
 			</form>

@@ -24,11 +24,11 @@ Clients provide you an easiest way to add and retrieve clients. Various UI styli
 - Also, you may choose the UI style you want to display client information on your site
 
 * Like the plugin or want features? Tweet to us [@think201](https://twitter.com/think201)
-* Also you can read more about the plugin & its development at [Think201 Labs](http://labs.think201.com/plugin/clients/)
+* Also you can read more about the plugin & its development at [Think201](http://think201.com)
 
 = Plugin Support =
 
-Dedicated Support: talk to us on Twitter [@think201](https://twitter.com/think201) or [Think201 Labs](http://labs.think201.com)
+Dedicated Support: talk to us on Twitter [@think201](https://twitter.com/think201) or [Think201](http://think201.com)
 
 To raise issues or if you have a question for us, post to the support forum here https://wordpress.org/support/plugin/clients and we are happy to help.
 

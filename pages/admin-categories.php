@@ -7,14 +7,14 @@
     <div id="message" class="error below-h2 ct-msg ct_error_msg">
         <p>Issues adding Category.</p>
     </div>
-    
+
     <div class="tbox">
         <div class="tbox-heading">
             <h3>Add New Category</h3>
-            <a href="http://labs.think201.com/plugin/clients" target="_blank" class="pull-right">Need help?</a>
+            <a href="https://github.com/Think201/wordpress-plugin-clients" target="_blank" class="pull-right">Need help?</a>
         </div>
         <div class="tbox-body">
-            <form name="ct-add-category" id="ct-add-category" action="#" method="post">             
+            <form name="ct-add-category" id="ct-add-category" action="#" method="post">
                 <input type="hidden" name="action" value="page_add_category">
                 <table class="form-table">
 
@@ -25,10 +25,10 @@
                         <td>
                             <input type="text" id="category" name="category" class="regular-text">
                         </td>
-                    </tr>                                       
+                    </tr>
 
                 </table>
-                <p class="submit">      
+                <p class="submit">
                     <button onClick="CTForm.post('#ct-add-category')" class="button button-primary" type="button">Add Category</button>
                 </p>
             </form>
