@@ -1,7 +1,7 @@
 <?php
 namespace ct;
 
-class CTAdmin
+class AdminSetup
 {
     protected static $instance = null;
 
