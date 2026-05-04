@@ -4,8 +4,9 @@ namespace ct;
 class Core
 {
 
-    public static function load($path)
+    public static function load($path, $args = array())
     {
-        return require_once CT_PLUGIN_DIR . '/src/' . $path;
+        extract($args, EXTR_SKIP);
+        return include CT_PLUGIN_DIR . '/src/' . $path;
     }
 }

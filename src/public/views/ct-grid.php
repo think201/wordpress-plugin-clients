@@ -8,6 +8,8 @@ $Config = shortcode_atts(
 		'showname' => false,
 		), $Config);
 
+$ClientList = empty($ClientList) ? array() : $ClientList;
+
 $Clients = array_chunk($ClientList, $Config['numcols']);
 
 $Width = 100 / $Config['numcols'];
