@@ -29,13 +29,10 @@ class PluginSetup
         PRIMARY KEY  (id)
         ) $charset_collate;";
 
-        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+        $wpdb->query( $ct_clients_query );
 
-        dbDelta( $ct_clients_query );
-
-        
-
-        ct\CTData::addCategory('General');
+        Core::load('admin/classes/ct-data.php');
+        CTData::addCategory('General');
         
     }
 
