@@ -9,6 +9,7 @@ class CTShortCodes
     {
         // All the attributes
         $ClientList = self::getClients($attribs);
+
     
         $Output = CTShortCodes::_processStyle($ClientList, $attribs);
 
@@ -56,17 +57,17 @@ class CTShortCodes
 
     public static function _List($ClientList, $Config)
     {
-        require_once CT_PLUGIN_DIR .'/templates/ct-lists.php'; 
+        Core::load('public/views/ct-lists.php', compact('ClientList', 'Config'));
     }
 
     public static function _Grid($ClientList, $Config)
     {        
-        require_once CT_PLUGIN_DIR .'/templates/ct-grid.php';     
+        Core::load('public/views/ct-grid.php', compact('ClientList', 'Config'));      
     }
 
     public static function _Slider($ClientList, $Config)
     {        
-        require_once CT_PLUGIN_DIR .'/templates/ct-slider.php';  
+        Core::load('public/views/ct-slider.php', compact('ClientList', 'Config'));
     }
 }
 

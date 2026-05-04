@@ -148,6 +148,11 @@ var CTCreateShortCode = {
     }); 
   }
 };
+
+window.CTForm = CTForm;
+window.Upload = Upload;
+window.Validator = Validator;
+window.CTCreateShortCode = CTCreateShortCode;
  
 $(function() {
     Upload.init();
