@@ -21,6 +21,11 @@ if (!defined('CT_FILE_PATH')) {
 	define('CT_FILE_PATH', __FILE__);
 }
 
+if(!defined('CT_PLUGIN_URL')) {
+    define('CT_PLUGIN_URL', plugin_dir_url(__FILE__));
+}
+
+
 require_once CT_PLUGIN_DIR . '/src/core/core.php';
 require_once CT_PLUGIN_DIR . '/src/core/loader.php';
 

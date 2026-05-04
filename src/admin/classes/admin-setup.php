@@ -16,10 +16,7 @@ class AdminSetup
     public function init()
     {   
         $this->fileIncludes();
-
         add_action('admin_menu', array($this, 'menuItems')); 
-
-        add_action( 'init', array($this, 'userFiles')); 
     }
 
     public function fileIncludes()
@@ -54,37 +51,12 @@ class AdminSetup
         if(is_admin()) 
         {
             wp_enqueue_media();        
-            wp_enqueue_script( 'ct-ajax-request', plugins_url( 'public/js/ct-admin.js', dirname(__FILE__) ), array( 'jquery' ), false, true );
-            wp_enqueue_script( 'ct-think201-validator', plugins_url( 'public/js/think201-validator.js', dirname(__FILE__) ), array( 'jquery' ), false, true );
-            wp_localize_script( 'ct-ajax-request', 'CTAjax', array( 'ajaxurl' => plugins_url( 'admin-ajax.php' ) ) );
+            wp_enqueue_script( 'ct-ajax-request', CT_PLUGIN_URL . 'build/js/admin.js', array( 'jquery' ), false, true );
+            // wp_localize_script( 'ct-ajax-request', 'CTAjax', array( 'ajaxurl' => plugins_url( 'admin-ajax.php' ) ) );
             
-            wp_enqueue_style( 'ct-css', plugins_url( 'public/css/ct.css', dirname(__FILE__) ), array(), CT_VERSION, 'all' );
+            wp_enqueue_style( 'admin-css', CT_PLUGIN_URL . 'build/css/admin.css', array(), CT_VERSION, 'all' );
         }
     }
-
-    public function userFiles()
-    {
-        if (!is_admin()) 
-        {  
-            $RedlofPluginConfig = get_option('wp_redlof_plugins_config', false);
-
-            if($RedlofPluginConfig !== false AND isset($RedlofPluginConfig['ct_css']) AND $RedlofPluginConfig['ct_css'])
-            {
-                $CssSet = true;
-            }
-            else 
-            {
-                $CssSet = false;
-            }            
-
-            if($CssSet == false)
-            {
-                wp_enqueue_style( 'ct-css', plugins_url( 'public/css/ct.css', dirname(__FILE__) ), array(), CT_VERSION, 'all' );
-            }
-
-            wp_enqueue_script( 'ct-user', plugins_url( 'public/js/ct-user.js', dirname(__FILE__) ), array( 'jquery' ), false, true );
-        }
-    }    
 
     public function pageAddNew()
     {

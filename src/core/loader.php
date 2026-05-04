@@ -46,15 +46,13 @@ if (is_admin()) {
         $initObj = AdminSetup::get_instance();
         $initObj->init();
     });
-
-
 } 
 else {
     // // load public setup
-    // Core::load('public/classes/public-setup.php');
+    Core::load('public/classes/public-setup.php');
 
-    // add_action('plugins_loaded', function () {
-    //     $initObj = PublicSetup::get_instance();
-    //     $initObj->init();
-    // });
+    add_action('plugins_loaded', function () {
+        $initObj = PublicSetup::get_instance();
+        $initObj->init();
+    });
 }
