@@ -38,23 +38,23 @@ Core::load('core/plugin-setup.php');
 register_activation_hook(CT_FILE_PATH, ['ct\PluginSetup', 'activate']);
 register_deactivation_hook(CT_FILE_PATH, ['ct\PluginSetup', 'deactivate']);
 
-// if (is_admin()) {
-//     // load admin setup
-//     Core::load('admin/classes/admin-setup.php');
-//     add_action('plugins_loaded', function () {
-//         $initObj = AdminSetup::get_instance();
-//         $initObj->init();
-//     });
 
-//     die("Got till here")
+if (is_admin()) {
+    // load admin setup
+    Core::load('admin/classes/admin-setup.php');
+    add_action('plugins_loaded', function () {
+        $initObj = AdminSetup::get_instance();
+        $initObj->init();
+    });
 
-// } 
-// else {
-//     // // load public setup
-//     // Core::load('public/classes/public-setup.php');
 
-//     // add_action('plugins_loaded', function () {
-//     //     $initObj = PublicSetup::get_instance();
-//     //     $initObj->init();
-//     // });
-//}
+} 
+else {
+    // // load public setup
+    // Core::load('public/classes/public-setup.php');
+
+    // add_action('plugins_loaded', function () {
+    //     $initObj = PublicSetup::get_instance();
+    //     $initObj->init();
+    // });
+}

@@ -31,7 +31,7 @@ class PluginSetup
 
         $wpdb->query( $ct_clients_query );
 
-        Core::load('admin/classes/ct-data.php');
+        Core::load('modules/ct-data.php');
         CTData::addCategory('General');
         
     }
